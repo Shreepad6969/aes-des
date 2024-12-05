@@ -1,13 +1,108 @@
-body {
+/* Global reset */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Body style */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+}
+
+/* Navigation bar */
+nav {
+  background-color: #333;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 20px;
+  padding-top: 60px; /* Ensures content doesn't hide behind nav */
+}
+
+/* Sections */
+section {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+ul {
+  margin-bottom: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Mobile responsive design */
+@media screen and (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+}
+/* Ensure images are responsive and maintain aspect ratio */
+img {
+  max-width: 100%;  /* Image will scale to fit the container */
+  height: auto;     /* Maintain aspect ratio */
+  display: block;   /* Prevent inline-block spacing */
+  margin-bottom: 20px; /* Optional: Add space below images */
+}
+
+/* Optional: Limit container width for images */
+section {
+  width: 100%;
+  max-width: 800px;  /* Control max width of the image container */
+  margin: 0 auto;    /* Center the container */
 }

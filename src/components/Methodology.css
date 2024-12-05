@@ -1,0 +1,23 @@
+/* Flexbox container to display images side by side */
+.image-container {
+    display: flex;
+    justify-content: space-between;  /* Space between images */
+ /* Optional: Adjust the space between images */
+    flex-wrap: wrap;  /* Ensure images wrap on smaller screens */
+    margin-bottom: 20px;  /* Optional: Add spacing below the images */
+  }
+  
+  .image-container img {
+    max-width: 30%;   /* Set the max width of the images to 40% of their container */
+    height: 500px;     /* Maintain aspect ratio */
+    display: block;   /* Ensure images are displayed as block elements */
+    border-radius: 8px; /* Optional: Add rounded corners */
+  }
+  
+  /* Optional: Adjust image size for mobile devices */
+  @media (max-width: 768px) {
+    .image-container img {
+      max-width: 80%;  /* Allow images to take up 80% of the container width on smaller screens */
+    }
+  }
+  
